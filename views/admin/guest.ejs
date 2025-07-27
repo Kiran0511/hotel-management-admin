@@ -1,0 +1,107 @@
+<div class="page-content">
+	
+		
+    <nav class="navbar top-bar navbar-light py-0 py-xl-3">
+        <div class="container-fluid p-0">
+            <div class="d-flex align-items-center w-100">
+
+                
+                <div class="d-flex align-items-center d-xl-none">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="navbar-brand-item h-40px" src="assets/images/logo-icon.svg" alt="">
+                    </a>
+                </div>
+                
+
+                
+                <div class="navbar-expand-xl sidebar-offcanvas-menu">
+                    <button class="navbar-toggler me-auto p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-auto-close="outside">
+                        <i class="bi bi-list text-primary fa-fw" data-bs-target="#offcanvasMenu"></i>
+                    </button>
+                </div>
+                
+                
+                
+                <div class="navbar-expand-lg ms-auto ms-xl-0">
+                    
+                    <button class="navbar-toggler ms-auto p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopContent" aria-controls="navbarTopContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    
+
+                    
+                    <div class="collapse navbar-collapse w-100 z-index-1" id="navbarTopContent">
+
+                    </div>
+                    
+                </div>
+                
+                
+                
+
+    
+    <div class="page-content-wrapper p-xxl-4">
+
+        
+        <div class="row">
+            <div class="col-12 mb-4 mb-sm-5">
+                <div class="d-sm-flex justify-content-between align-items-center">
+                    <h1 class="h3 mb-3 mb-sm-0">Guest List</h1>
+                    <div class="d-grid"><a href="#" class="btn btn-primary mb-0"><i class="bi bi-filetype-pdf me-2"></i>Generate Report</a>	</div>					
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+
+        
+        <div class="card shadow mt-5">
+            
+            <div class="card-body">
+                <div class="bg-light rounded p-3 d-none d-lg-block">
+                    <div class="row row-cols-5 g-4">
+                        <div class="col"><h6 class="mb-0">User_ID</h6></div>
+                        <div class="col"><h6 class="mb-0">User Name</h6></div>
+                        <div class="col"><h6 class="mb-0">Email</h6></div>
+                        <div class="col"><h6 class="mb-0">Mobile</h6></div>
+                        <div class="col"><h6 class="mb-0">Aadhar</h6></div>
+                        
+                    </div>
+                </div>
+                
+                <div class="row row-cols-5 align-items-center border-bottom g-4 px-2 py-4">
+                    <% if (users && users.length > 0) { %>
+                      <% users.forEach(function(user) { %>
+                        <div class="col">
+                          <div class="d-flex align-items-center">
+                            <div class="ms-2">
+                              <h6 class="mb-0 fw-light"><%= user.id %></h6>
+                            </div>
+                          </div>
+                        </div>	
+                        <div class="col">
+                          <h6 class="mb-0 fw-normal"><%= user.username %></h6>
+                        </div>
+                        <div class="col">
+                          <h6 class="mb-0 fw-normal text-truncate"><%= user.email %></h6>
+                        </div>
+                        <div class="col">
+                          <h6 class="mb-0 fw-normal"><%= user.mobile %></h6>
+                        </div>
+                        <div class="col">
+                          <h6 class="mb-0 fw-normal"><%= user.aadhar %></h6>
+                        </div>
+                      <% }); %>
+                    <% } else { %>
+                      <p>No Users</p>
+                    <% } %>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
